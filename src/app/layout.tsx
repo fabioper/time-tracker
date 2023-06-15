@@ -1,8 +1,6 @@
 import "./globals.css"
-import { Inter } from "next/font/google"
 import { type PropsWithChildren } from "react"
-
-const inter = Inter({ subsets: ["latin"] })
+import { inter } from "@/assets/fonts"
 
 export const metadata = {
   title: "Time Tracker",
@@ -11,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-br" className={inter.variable}>
+      <body>{children}</body>
     </html>
   )
 }

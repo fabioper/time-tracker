@@ -1,1 +1,23 @@
-:root {}
+:root {
+  --color-background: #0E0E0E;
+  --color-foreground: #FFFFFF;
+  --font-family: var(--inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-family);
+}
