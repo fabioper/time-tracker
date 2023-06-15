@@ -15,7 +15,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       <body>
         <Header />
         <div className="container">
-          <Breadcrumb items={[]} />
+          <Breadcrumb />
           {children}
         </div>
       </body>

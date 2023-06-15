@@ -1,18 +1,22 @@
+"use client"
+
 import styles from "./Breadcrumb.module.css"
 import Link from "next/link"
 import { MdHome } from "react-icons/md"
 import { useCallback } from "react"
+import type { Route } from "next"
+import { useBreadcrumbs } from "@/hooks/useBreadcrumbs"
+import { usePathname } from "next/navigation"
 
-interface BreadcrumbItem {
+export interface BreadcrumbItem {
   label: string
-  path?: string
+  path?: Route
 }
 
-interface BreadcrumbProps {
-  items: BreadcrumbItem[]
-}
+export function Breadcrumb() {
+  const path = usePathname() as Route
+  const items = useBreadcrumbs(path)
 
-export function Breadcrumb(props: BreadcrumbProps) {
   const renderItem = useCallback((item: BreadcrumbItem) => {
     if (item.path) {
       return <Link href={item.path}>{item.label}</Link>
@@ -30,7 +34,7 @@ export function Breadcrumb(props: BreadcrumbProps) {
           </Link>
         </li>
 
-        {props.items.map(item => (
+        {items.map(item => (
           <li key={item.path}>{renderItem(item)}</li>
         ))}
       </ul>
