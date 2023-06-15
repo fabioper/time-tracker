@@ -23,6 +23,7 @@
     ],
     "rules": {
         "arrow-parens": ["error", "as-needed"],
+        "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/quotes": ["warn", "double"],
         "react/react-in-jsx-scope": "off",
