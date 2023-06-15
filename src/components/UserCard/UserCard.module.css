@@ -16,13 +16,13 @@
   border-radius: 100%;
 }
 
-.userInfo strong {
+.username {
   color: inherit;
   font-size: var(--font-size-regular);
   font-weight: 600;
 }
 
-.userInfo a {
+.signoutLink {
   color: royalblue;
   font-size: var(--font-size-small);
 }
