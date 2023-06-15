@@ -1,0 +1,28 @@
+.userCard {
+  display: flex;
+  gap: .5rem;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .2rem;
+}
+
+.picture {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+}
+
+.userInfo strong {
+  color: inherit;
+  font-size: var(--font-size-regular);
+  font-weight: 600;
+}
+
+.userInfo a {
+  color: royalblue;
+  font-size: var(--font-size-small);
+}

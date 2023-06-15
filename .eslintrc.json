@@ -6,6 +6,7 @@
         "jest": true
     },
     "extends": [
+        "next",
         "plugin:react/recommended",
         "standard-with-typescript",
         "prettier"
