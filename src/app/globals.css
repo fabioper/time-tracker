@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --color-background: #0E0E0E;
   --color-foreground: #FFFFFF;
@@ -7,8 +11,6 @@
   --font-size-xsmall: .75rem;
   --font-size-small: .85rem;
   --font-size-regular: 1rem;
-
-  --content-max-width: 1200px;
 }
 
 * {
@@ -27,10 +29,4 @@ body {
   background: var(--color-background);
   color: var(--color-foreground);
   font-family: var(--font-family);
-}
-
-.container {
-  width: calc(100% - 1rem);
-  max-width: var(--content-max-width);
-  margin: 0 auto;
 }

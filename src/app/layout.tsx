@@ -14,7 +14,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
     <html lang="pt-br" className={inter.variable}>
       <body>
         <Header />
-        <div className="container">
+        <div className="container mt-8">
           <Breadcrumb />
           {children}
         </div>

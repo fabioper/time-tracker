@@ -1,5 +1,5 @@
 import type { Route } from "next"
-import { type BreadcrumbItem } from "@/components/Breadcrumb/Breadcrumb"
+import { type BreadcrumbItem } from "@/components/Breadcrumb"
 
 const breadcrumbs: Record<Route, BreadcrumbItem[]> = {
   "/": [],

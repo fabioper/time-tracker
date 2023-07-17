@@ -1,6 +1,5 @@
 "use client"
 
-import styles from "./Breadcrumb.module.css"
 import Link from "next/link"
 import { MdHome } from "react-icons/md"
 import { useCallback } from "react"
@@ -13,7 +12,7 @@ export interface BreadcrumbItem {
   path?: Route
 }
 
-export function Breadcrumb() {
+function Breadcrumb() {
   const path = usePathname() as Route
   const items = useBreadcrumbs(path)
 
@@ -26,18 +25,25 @@ export function Breadcrumb() {
   }, [])
 
   return (
-    <div className={styles.breadcrumbs}>
-      <ul>
-        <li className={styles.home}>
-          <Link href="/" title="Home">
-            <MdHome />
+    <div>
+      <ul className="flex items-center gap-2 text-[#454545] text-sm my-8">
+        <li className="flex items-center">
+          <Link href="/" title="Home" className="text-foreground">
+            <MdHome className="text-base" />
           </Link>
         </li>
 
-        {items.map(item => (
-          <li key={item.path}>{renderItem(item)}</li>
+        {items.map((item) => (
+          <li
+            key={item.path}
+            className="flex items-center before:content-['/'] before:mr-2"
+          >
+            {renderItem(item)}
+          </li>
         ))}
       </ul>
     </div>
   )
 }
+
+export default Breadcrumb
